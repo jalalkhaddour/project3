@@ -20,7 +20,7 @@ function bot($method,$datas=[]){
 	bot('sendMessage',[
 	'chat_id'=>$chat_id,
 	'text'=>$text,
-	'parse_mode'=>$mode
+	'parse_mode'=>$model
 	]);
 	}
 	function sendaction($chat_id, $action){
@@ -29,12 +29,12 @@ function bot($method,$datas=[]){
 	'action'=>$action
 	]);
 	}
-	function Forward($KojaShe,$AzKoja,$KodomMSG)
+	function Forward($chat_id,$from_cht_id,$msgID)
 {
     bot('ForwardMessage',[
-        'chat_id'=>$KojaShe,
-        'from_chat_id'=>$AzKoja,
-        'message_id'=>$KodomMSG
+        'chat_id'=>$chat_id,
+        'from_chat_id'=>$from_cht_id,
+        'message_id'=>$msgID
     ]);
 }
 function sendphoto($chat_id, $photo, $action){

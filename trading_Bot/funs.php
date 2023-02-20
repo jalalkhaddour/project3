@@ -179,7 +179,10 @@ if ($pg==1) {
     }
     return $prods;
 }
-
+function SendTypingAction($chId)
+{
+    bot('sendChatAction',['chat_id' => $chId,'action' => "typing"]);
+}
 function to_get_specific_prod($productCode, $srl)
 {
     $prod = file_get_contents("Products/$productCode/$srl.txt");
